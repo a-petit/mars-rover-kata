@@ -17,4 +17,5 @@ class Rover:
         return f"{self._coordinates} {self._direction.label()}"
 
     def executes(self, commands):
-        self._direction = self._direction.left()
+        for command in commands:
+            self._direction = self._direction.left()

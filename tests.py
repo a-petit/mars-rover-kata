@@ -10,7 +10,7 @@ def test_landing(position):
 
 @pytest.mark.parametrize("initial,commands,final", [
     ("0 0 N", "L", "0 0 W"),
-    # ("0 0 N", "LL", "0 0 S"),
+    ("0 0 N", "LL", "0 0 S"),
 ])
 def test_execute_commands(initial, commands, final):
     rover = Rover.at(initial)

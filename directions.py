@@ -15,12 +15,20 @@ class Direction:
         pass
 
 
+class South(Direction):
+    def left(self):
+        raise NotImplementedError()
+
+    def label(self) -> str:
+        return "S"
+
+
 class West(Direction):
     def label(self) -> str:
         return "W"
 
     def left(self):
-        raise NotImplementedError()
+        return South()
 
 
 class North(Direction):

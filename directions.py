@@ -11,11 +11,18 @@ class Direction:
         pass
 
     @abstractmethod
+    def right(self):
+        pass
+
+    @abstractmethod
     def label(self) -> str:
         pass
 
 
 class East(Direction):
+    def right(self):
+        return South()
+
     def left(self):
         return North()
 
@@ -24,6 +31,9 @@ class East(Direction):
 
 
 class South(Direction):
+    def right(self):
+        return West()
+
     def left(self):
         return East()
 
@@ -32,6 +42,9 @@ class South(Direction):
 
 
 class West(Direction):
+    def right(self):
+        return North()
+
     def label(self) -> str:
         return "W"
 
@@ -40,6 +53,9 @@ class West(Direction):
 
 
 class North(Direction):
+    def right(self):
+        return East()
+
     def label(self) -> str:
         return "N"
 

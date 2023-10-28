@@ -18,4 +18,7 @@ class Rover:
 
     def executes(self, commands):
         for command in commands:
-            self._direction = self._direction.left()
+            match command:
+                case "L": self._direction = self._direction.left()
+                case "R": self._direction = self._direction.right()
+                case _: raise Exception(f"{command} non reconnue")

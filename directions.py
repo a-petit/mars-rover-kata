@@ -17,7 +17,7 @@ class Direction:
 
 class East(Direction):
     def left(self):
-        raise NotImplementedError()
+        return North()
 
     def label(self) -> str:
         return "E"

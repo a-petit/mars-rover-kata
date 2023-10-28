@@ -12,6 +12,7 @@ def test_landing(position):
     ("0 0 N", "L", "0 0 W"),
     ("0 0 N", "LL", "0 0 S"),
     ("0 0 N", "LLL", "0 0 E"),
+    ("0 0 N", "LLLL", "0 0 N"),
 ])
 def test_execute_commands(initial, commands, final):
     rover = Rover.at(initial)

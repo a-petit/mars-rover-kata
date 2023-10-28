@@ -21,3 +21,6 @@ Les lettres possibles sont
 - B : reculer d'un point de grille et maintenir le même cap
 
 
+
+Expliquer dans le texte de la vidéo pourquoi on commencer par Left plutôt que M
+

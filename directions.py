@@ -6,7 +6,10 @@ from vector import Vector
 class Direction:
     @classmethod
     def from_label(cls, label):
-        return North()
+        match label:
+            case "N": return North()
+            case "E": return East()
+            case _: raise Exception(f"{label} non reconnu")
 
     @abstractmethod
     def left(self):
@@ -27,7 +30,7 @@ class Direction:
 
 class East(Direction):
     def delta(self) -> Vector:
-        raise NotImplementedError()
+        return Vector(1, 0)
 
     def right(self):
         return South()

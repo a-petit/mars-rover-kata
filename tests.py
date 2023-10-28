@@ -1,3 +1,6 @@
+import pytest
+
+
 class Rover:
     @classmethod
     def at(cls, position):
@@ -7,5 +10,6 @@ class Rover:
         return "1 2 N"
 
 
-def test_landing():
-    assert Rover.at("1 2 N").position() == "1 2 N"
+@pytest.mark.parametrize("position", ["1 2 N"])
+def test_landing(position):
+    assert Rover.at(position).position() == position

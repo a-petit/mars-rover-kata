@@ -9,6 +9,7 @@ class Direction:
         match label:
             case "N": return North()
             case "E": return East()
+            case "S": return South()
             case _: raise Exception(f"{label} non reconnu")
 
     @abstractmethod
@@ -44,7 +45,7 @@ class East(Direction):
 
 class South(Direction):
     def delta(self) -> Vector:
-        raise NotImplementedError()
+        return Vector(0, -1)
 
     def right(self):
         return West()

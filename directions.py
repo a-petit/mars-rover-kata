@@ -1,5 +1,7 @@
 from abc import abstractmethod
 
+from vector import Vector
+
 
 class Direction:
     @classmethod
@@ -18,8 +20,15 @@ class Direction:
     def label(self) -> str:
         pass
 
+    @abstractmethod
+    def delta(self) -> Vector:
+        pass
+
 
 class East(Direction):
+    def delta(self) -> Vector:
+        raise NotImplementedError()
+
     def right(self):
         return South()
 
@@ -31,6 +40,9 @@ class East(Direction):
 
 
 class South(Direction):
+    def delta(self) -> Vector:
+        raise NotImplementedError()
+
     def right(self):
         return West()
 
@@ -42,6 +54,9 @@ class South(Direction):
 
 
 class West(Direction):
+    def delta(self) -> Vector:
+        raise NotImplementedError()
+
     def right(self):
         return North()
 
@@ -53,6 +68,9 @@ class West(Direction):
 
 
 class North(Direction):
+    def delta(self) -> Vector:
+        return Vector(0, 1)
+
     def right(self):
         return East()
 

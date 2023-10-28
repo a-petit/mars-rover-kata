@@ -1,3 +1,5 @@
-# mars-rover-kata
+# mars-rover-kata 👩‍🚀
 
-Une implémentation possible du kata Mars Rover
+Une implémentation possible du kata Mars Rover.
+
+Le screencast de l'implémentation est disponible ici : https://youtu.be/uWiv1lNQ9sg !
